@@ -1,0 +1,25 @@
+# local env / secrets
+.env
+*.local
+
+# 個人 Claude Code 環境設定 — 非專案內容，不公開
+.claude/
+
+# codebase-memory 預建圖譜 — 刻意公開，讓 clone 下來的人免重新索引
+# 若你 fork 這個 repo 想排除它，把下面這行取消註解：
+# .codebase-memory/
+
+# logs / tmp
+*.log
+tmp/
+
+# vendor 執行期產物 — CapitalLog 含個人登入帳號，絕不可入 repo
+CapitalLog/
+
+# Visual Studio 建置/工作區垃圾
+.vs/
+obj/
+bin/
+*.suo
+*.user
+*.cache

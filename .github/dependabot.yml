@@ -1,0 +1,9 @@
+# Dependabot 設定：本專案唯一的「依賴」是 CI 用的 GitHub Actions。
+# 監控 actions/checkout 等第三方 action 的新版本，Dependabot 會提出 PR 更新
+# .github/workflows/ci.yml 中釘選的完整 commit SHA（並同步更新版本註解）。
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"

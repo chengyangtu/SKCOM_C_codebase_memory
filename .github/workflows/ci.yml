@@ -1,0 +1,27 @@
+name: CI
+
+# 用 pull_request（而非 pull_request_target）：pull_request_target 會用「目標分支」的權限
+# 與 secrets 去執行「來源分支」（可能是不受信任的外部 fork）的程式碼，是 GitHub Actions
+# 常見的安全誤用來源。本專案 CI 本身也不需要任何 secret，pull_request 已足夠且更安全。
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# 最小權限原則：整個 workflow 只需要讀取 repo 內容即可完成檢查，不需要寫入權限。
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: 驗證規格庫完整性
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        # 第三方 action 一律釘選完整 commit SHA，不用可能被上游重新指向的浮動標籤（如 @v4）；
+        # SHA 後面用註解標明對應版本，方便人工核對與日後升級（Dependabot 會自動提 PR 更新）。
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: 驗證 Markdown 標題／連結、六大模組規格檔、知識圖譜快照
+        run: python3 .github/scripts/check_repo.py

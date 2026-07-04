@@ -1,0 +1,31 @@
+MIT License
+
+Copyright (c) 2026 chengyangtu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+適用範圍：本 MIT 授權僅涵蓋本專案原創內容——api_spec/（規格庫、_raw 抽取除外）、
+tools/、以及其餘專案自建文件。
+
+Source_code/ 與 api_spec/_raw/ 內含群益期貨（Capital Futures）官方 CapitalAPI
+範例程式碼、DLL 元件與說明文件，其著作權與散布條款屬群益期貨所有，不在本
+MIT 授權範圍內，此處收錄僅供技術參考。使用前請自行確認符合群益期貨的授權
+條款；如有疑慮請洽群益期貨或移除該部分後再行散布。
