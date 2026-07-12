@@ -23,3 +23,6 @@ bin/
 *.suo
 *.user
 *.cache
+
+# Visual SourceSafe 遺留中繼檔（內嵌 vendor 內部 VSS 路徑，無用途）
+*.scc
